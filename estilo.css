@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: inset -1px 0 10px var(--cinza);
+}
+
+:root{ /*Variáveis*/
+    --cinza: rgb(49, 48, 48);
+    --Amarelo: wheat;
+    --cinza2: rgb(109, 107, 107);
+}
+
+.titulo{ /*Estilização da tag "h1" de cada seção*/
+    font-size: 40px;
+    text-align: center;
+}
+
+.grade{ /*Grade para organizar a disposição dos elementos das seções*/
+    display: grid;
+    grid-template-columns: repeat(12, 8.33%);
+    grid-template-rows: repeat(12, 4vh);
+    grid-column-gap: 34px;
+}
+
+.text{ /*Definindo a linha e coluna do texto de cada seção*/
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    font-size: 20px;
+}
+
+picture{ /*Definindo a linha e coluna da imagem de cada seção*/
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+header{ /*Estilizando o cabeçalho*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--cinza);
+    z-index: 100;
+    box-shadow: 0 1px 10px var(--cinza);
+}
+
+header h1{ /*Estilizando o titulo do cabeçalho*/
+    text-align: center;
+    color: white;
+}
+
+.menu1, .navegacao{ /*Estilizando e definindo a disposição dos elementos do menu*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    width: 100%;
+    background-color: var(--Amarelo);
+}
+
+.navegacao a, .navegacao li{ /*Estilizando os links e itens de lista do menu*/
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--cinza);
+    transition: 0.5s;
+}
+
+.navegacao a:hover{ /*Atribuindo uma subclasse aos links do menu*/
+    color: var(--cinza2);
+    text-decoration: overline;
+}
+
+.text1{
+    background-color: rgb(243, 187, 83); /*Cor de fundo da seção 1*/
+}
+
+.text2{
+    background-color: rgb(40, 122, 230); /*Cor de fundo da seção 2*/
+}
+
+.text3{
+    background-color: rgb(52, 184, 52); /*Cor de fundo da seção 3*/
+}
+
+footer{ /*Estilização do rodapé*/
+    height: 20vh;
+}
+
+.contato{
+    position: relative;
+    left: 100px;
+}
