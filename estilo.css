@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: inset -1px 0 10px var(--cinza);
+}
+
+:root{
+    --cinza: rgb(49, 48, 48);
+    --Amarelo: wheat;
+    --cinza2: rgb(109, 107, 107);
+}
+
+.titulo{
+    font-size: 40px;
+    text-align: center;
+}
+
+.grade{
+    display: grid;
+    grid-template-columns: repeat(12, 8.33%);
+    grid-template-rows: repeat(12, 4vh);
+    grid-column-gap: 34px;
+}
+
+.text{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    font-size: 20px;
+}
+
+picture{
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--cinza);
+    z-index: 100;
+    box-shadow: 0 1px 10px var(--cinza);
+}
+
+header h1{
+    text-align: center;
+    color: white;
+}
+
+.menu1, .navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    width: 100%;
+    background-color: var(--Amarelo);
+}
+
+.navegacao a, .navegacao li{
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--cinza);
+    transition: 0.5s;
+}
+
+.navegacao a:hover{
+    color: var(--cinza2);
+    text-decoration: overline;
+}
+
+.text1{
+    background-color: rgb(243, 187, 83);
+}
+
+.text2{
+    background-color: rgb(40, 122, 230);
+}
+
+.text3{
+    background-color: rgb(52, 184, 52);
+}
+
+footer{
+    height: 20vh;
+}
+
+.contato{
+    position: relative;
+    left: 100px;
+}
